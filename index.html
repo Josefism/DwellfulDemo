@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta name="robots" content="noindex, nofollow">
+		<title>Dwellful Demo</title>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" id="jquery-js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" id="jqueryui-js"></script>
+		<script type="text/javascript" src="https://demos.assemblystudio.com/dwellful/scripts.js" id="scripts-js"></script>
+		<link rel="stylesheet" id="styles-css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" type="text/css" media="all">
+		<link rel="stylesheet" id="styles-css" href="https://demos.assemblystudio.com/dwellful/styles.css" type="text/css" media="all">
+	</head>
+	<body>
+		<header>
+			<h2>Dwellful API Demo</h2>
+		</header>
+		<div class="content">
+			<p>Answer each question below to get your rates &amp; agent match.</p>
+			<div id="navButtons">
+				<button class="prev">&#8592;</button>
+				<button class="next">&#8594;</button>
+			</div>
+			<div class="step-1 current" id="propertyIntent">
+				<h3>How will you be using this property?</h3>
+				<div class="button-wrap">
+					<button class="primary">Primary Residence</button>
+					<button class="secondary">Secondary Residence</button>
+					<button class="investment">Investment Property</button>
+				</div>
+			</div>
+			<div class="step-2" id="propertyType">
+				<h3>Property Type</h3>
+				<div class="button-wrap">
+					<input type="radio" id="single" name="homeType" value="single" />
+					<label for="single">Single Family</label>
+					<input type="radio" id="multi" name="homeType" value="multi" />
+					<label for="multi">Multi Family</label>
+					<input type="radio" id="condo" name="homeType" value="condo" />
+					<label for="condo">Townhome/Condo</label>
+					<input type="radio" id="mobile" name="homeType" value="mobile" />
+					<label for="mobile">Mobile Home</label>
+				</div>
+			</div>
+			<div class="step-3">
+				<h3>Established Purchase Price</h3>
+				<div class="button-wrap">
+					<div id="purchasePriceSlider"></div>
+					<h4 id="purchasePriceValue">$<span>0</span></h4>
+				</div>
+			</div>
+			<div class="step-4">
+				<h3>Approximate Down Payment</h3>
+				<div class="button-wrap">
+					<div id="downPaymentSlider"></div>
+					<h4 id="downPaymentValue">$<span>0</span></h4>
+				</div>
+			</div>
+			<div class="step-5" id="foundHome">
+				<h3>Already found a home to buy?</h3>
+				<div class="button-wrap">
+					<button class="affirm">Yes</button>
+					<button class="reject">No</button>
+				</div>
+			</div>
+			<div class="step-6" id="hasAgent">
+				<h3>Already working with a real estate agent?</h3>
+				<div class="button-wrap">
+					<button class="affirm">Yes</button>
+					<button class="reject">No</button>
+				</div>
+			</div>
+			<div class="step-7" id="requestedMatch">
+				<h3>Request a match with a local real estate agent?</h3>
+				<div class="button-wrap">
+					<button class="affirm">Yes</button>
+					<button class="reject">No</button>
+				</div>
+			</div>
+			<form method="post" action="callApi.php">
+				<input type="hidden" name="propertyIntentField" id="propertyIntentField" />
+				<input type="hidden" name="propertyTypeField" id="propertyTypeField" />
+				<input type="hidden" name="purchasePriceField" id="purchasePriceField" />
+				<input type="hidden" name="downPaymentField" id="downPaymentField" />
+				<input type="hidden" name="foundHomeField" id="foundHomeField" />
+				<input type="hidden" name="hasAgentField" id="hasAgentField" />
+				<input type="hidden" name="requestedMatchField" id="requestedMatchField" />
+				<input type="submit" name="submit" />
+			</form>
+		</div>
+		<footer>
+		</footer>
+	</body>
+</html>
