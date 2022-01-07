@@ -10,34 +10,40 @@ header {
 	padding: 10px 30px;
 }
 .content {
-	max-width: 75vw;
+	max-width: 50vw;
 	margin: 0 auto;
-	padding: 50px 0 0 0;
+	padding: 50px 0;
 	color: #000;
 	background-color: #FFF;
 }
-.nav-buttons {
-	max-width: 75vw;
+#nav-buttons {
+	max-width: 50vw;
 	position: relative;
 }
-.nav-buttons .prev {
+#nav-buttons .prev {
 	float: left;
 }
-.nav-buttons .next {
+#nav-buttons .next {
 	float: right;
 }
-.step-1, .step-2, .step-3, .step-4, .step-5, .step-6, .step-7 {
+.step-1, .step-2, .step-3, .step-4, .step-5, .step-6, #result.not-ready {
 	display: none;
 }
-.step-1.current, .step-2.current, .step-3.current, .step-4.current, 
-.step-5.current, .step-6.current, .step-7.current {
+.step-1.current, .step-2.current, .step-3.current, 
+.step-4.current, .step-5.current, .step-6.current, #result.ready {
 	display: block;
 }
-footer {
-	width: 100vw;
-	height: 40px;
-	color: #FFF;
-	background-color: #000;
-	padding: 5px 0;
-	text-align: center;
+#submit {
+	margin: 10px 0 0 0;
+}
+#wrapupSubmit input {
+    display: block;
+    margin: 0 0 10px 0;
+}
+.response-label {
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.response-value {
+	font-style: italic;
 }
